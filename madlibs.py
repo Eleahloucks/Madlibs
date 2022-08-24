@@ -56,8 +56,7 @@ def show_madlib_form():
 
     if user_choice == 'yes':
         return render_template("game.html")
-    else:
-        return render_template("goodbye.html")
+    return render_template("goodbye.html")
 
 @app.route("/madlib")
 def show_madlib():
@@ -69,11 +68,6 @@ def show_madlib():
     return render_template("madlib.html", person=input_person, color=input_color, noun=input_noun, adjective=input_adj)
 
 
-    #return render_template("madlib.html", person_choice=input_person, color_choice=input_color, noun_choice=input_noun, adj_choice=input_adj)
-
-# @app.route("/goodbye")
-# def say_goodbye():
-#     return render_template("goodbye.html")
 
 
 if __name__ == "__main__":
